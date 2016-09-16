@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="0Eb-S6-RYd">
             <objects>
-                <viewController id="hIJ-RJ-Axt" sceneMemberID="viewController">
+                <viewController id="hIJ-RJ-Axt" customClass="HomeViewController" customModule="DYTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c1G-72-spz"/>
                         <viewControllerLayoutGuide type="bottom" id="EzF-PQ-yov"/>
