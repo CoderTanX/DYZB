@@ -19,6 +19,10 @@
 		EA018F4F1D8C143B006AC0C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA018F4E1D8C143B006AC0C4 /* MainViewController.swift */; };
 		EA018F511D8C17AE006AC0C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA018F501D8C17AE006AC0C4 /* HomeViewController.swift */; };
 		EA018F551D8C1EAD006AC0C4 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA018F541D8C1EAD006AC0C4 /* UIBarButtonItem+Extension.swift */; };
+		EACCB20E1D8D4CF1008F5D97 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACCB20D1D8D4CF1008F5D97 /* PageTitleView.swift */; };
+		EACCB2101D8D4DD8008F5D97 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACCB20F1D8D4DD8008F5D97 /* Const.swift */; };
+		EACCB2121D8D765E008F5D97 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACCB2111D8D765E008F5D97 /* PageContentView.swift */; };
+		EACCB2161D8D87F3008F5D97 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACCB2151D8D87F3008F5D97 /* PageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		EA018F4E1D8C143B006AC0C4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EA018F501D8C17AE006AC0C4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EA018F541D8C1EAD006AC0C4 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		EACCB20D1D8D4CF1008F5D97 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		EACCB20F1D8D4DD8008F5D97 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		EACCB2111D8D765E008F5D97 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		EACCB2151D8D87F3008F5D97 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +280,9 @@
 		EA018F391D8BED4B006AC0C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EACCB20D1D8D4CF1008F5D97 /* PageTitleView.swift */,
+				EACCB2111D8D765E008F5D97 /* PageContentView.swift */,
+				EACCB2151D8D87F3008F5D97 /* PageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				EA018F531D8C1E76006AC0C4 /* Extensions */,
+				EACCB20F1D8D4DD8008F5D97 /* Const.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -459,9 +471,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA018F551D8C1EAD006AC0C4 /* UIBarButtonItem+Extension.swift in Sources */,
+				EACCB2161D8D87F3008F5D97 /* PageView.swift in Sources */,
 				EA018EFC1D8BE675006AC0C4 /* AppDelegate.swift in Sources */,
+				EACCB20E1D8D4CF1008F5D97 /* PageTitleView.swift in Sources */,
+				EACCB2121D8D765E008F5D97 /* PageContentView.swift in Sources */,
 				EA018F4F1D8C143B006AC0C4 /* MainViewController.swift in Sources */,
 				EA018F511D8C17AE006AC0C4 /* HomeViewController.swift in Sources */,
+				EACCB2101D8D4DD8008F5D97 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
