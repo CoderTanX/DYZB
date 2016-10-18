@@ -10,13 +10,13 @@ import UIKit
 
 extension UIBarButtonItem {
     
-    convenience init(imageName: String, imageHighName: String = "", size: CGSize = CGSizeZero) {
-        let btn = UIButton(type: .Custom)
-        btn.setImage(UIImage(named: imageName), forState: .Normal)
+    convenience init(imageName: String, imageHighName: String = "", size: CGSize = CGSize.zero) {
+        let btn = UIButton(type: .custom)
+        btn.setImage(UIImage(named: imageName), for: UIControlState())
         if imageHighName != "" {
-            btn.setImage(UIImage(named: imageHighName), forState: .Highlighted)
+            btn.setImage(UIImage(named: imageHighName), for: .highlighted)
         }
-        if size != CGSizeZero {
+        if size != CGSize.zero {
             btn.frame.size = size
         }else{
             btn.sizeToFit()

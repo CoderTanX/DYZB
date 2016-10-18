@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kNormalCellId" id="gTV-IL-0wX" customClass="CollectionNormalCell" customModule="DYTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="215"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="321" height="215"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_cate_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Lbh-Z2-FM9">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="9Wf-IC-4b1"/>
+                            <constraint firstAttribute="width" constant="14" id="hpW-at-zNq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎来到召唤师峡谷" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWO-ho-ewN">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="Bdi-Th-yuC"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bobo熊猫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRh-bp-OZm">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aV9-Ye-pcq">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="6666" image="Image_online"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fWO-ho-ewN" secondAttribute="trailing" constant="10" id="ALY-oQ-QJy"/>
+                <constraint firstItem="Lbh-Z2-FM9" firstAttribute="top" secondItem="Bdi-Th-yuC" secondAttribute="bottom" constant="10" id="DbS-xZ-R4e"/>
+                <constraint firstAttribute="trailing" secondItem="Bdi-Th-yuC" secondAttribute="trailing" id="FaN-hs-C63"/>
+                <constraint firstAttribute="bottom" secondItem="Lbh-Z2-FM9" secondAttribute="bottom" constant="10" id="Jvl-ld-eeU"/>
+                <constraint firstItem="hRh-bp-OZm" firstAttribute="leading" secondItem="Bdi-Th-yuC" secondAttribute="leading" constant="5" id="Krk-gY-tK5"/>
+                <constraint firstItem="Bdi-Th-yuC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="O14-OF-mAR"/>
+                <constraint firstItem="fWO-ho-ewN" firstAttribute="centerY" secondItem="Lbh-Z2-FM9" secondAttribute="centerY" id="Qbn-hO-zC6"/>
+                <constraint firstItem="hRh-bp-OZm" firstAttribute="bottom" secondItem="Bdi-Th-yuC" secondAttribute="bottom" constant="-5" id="TLT-He-m2B"/>
+                <constraint firstItem="fWO-ho-ewN" firstAttribute="leading" secondItem="Lbh-Z2-FM9" secondAttribute="trailing" constant="5" id="Zsz-8n-0G0"/>
+                <constraint firstItem="Bdi-Th-yuC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cQq-Yg-47F"/>
+                <constraint firstItem="aV9-Ye-pcq" firstAttribute="bottom" secondItem="Bdi-Th-yuC" secondAttribute="bottom" constant="-5" id="fuu-TY-Spp"/>
+                <constraint firstItem="aV9-Ye-pcq" firstAttribute="trailing" secondItem="Bdi-Th-yuC" secondAttribute="trailing" constant="-5" id="q6z-HF-6Zc"/>
+                <constraint firstItem="Lbh-Z2-FM9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rvW-xG-GCy"/>
+            </constraints>
+            <size key="customSize" width="321" height="215"/>
+            <connections>
+                <outlet property="nicknameLabel" destination="hRh-bp-OZm" id="q6P-gx-5pO"/>
+                <outlet property="onlineBtn" destination="aV9-Ye-pcq" id="8uK-a7-K9o"/>
+                <outlet property="roomImageView" destination="Bdi-Th-yuC" id="h9m-Zj-23L"/>
+                <outlet property="roomNameLabel" destination="fWO-ho-ewN" id="M3i-Gk-wbw"/>
+            </connections>
+            <point key="canvasLocation" x="-226" y="284"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Image_online" width="16" height="16"/>
+        <image name="Img_default" width="172" height="103"/>
+        <image name="home_live_cate_normal" width="14" height="14"/>
+    </resources>
+</document>

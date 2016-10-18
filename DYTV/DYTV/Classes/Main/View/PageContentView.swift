@@ -1,4 +1,4 @@
-//
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                //
 //  PageContentView.swift
 //  DYTV
 //
@@ -10,8 +10,8 @@ import UIKit
 
 class PageContentView: UIScrollView {
     
-    private var childVcs: [UIViewController]
-    private var parentViewController: UIViewController
+    fileprivate var childVcs: [UIViewController]
+    fileprivate var parentViewController: UIViewController
     
     init(frame: CGRect, childVcs: [UIViewController], parentViewController: UIViewController) {
         self.childVcs = childVcs
@@ -28,7 +28,7 @@ class PageContentView: UIScrollView {
 ///设置UI界面
 extension PageContentView {
     
-    private func setupUI(){
+    fileprivate func setupUI(){
         //设置scrollview
         contentSize = CGSize(width: bounds.width * CGFloat(childVcs.count), height: bounds.width)
         showsHorizontalScrollIndicator = false

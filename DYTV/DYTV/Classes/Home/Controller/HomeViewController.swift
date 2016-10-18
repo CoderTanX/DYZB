@@ -12,13 +12,14 @@ private let kTitleViewH: CGFloat = 40
 
 class HomeViewController: UIViewController {
     ///懒加载中间的内容视图
-    private lazy var pageView: PageView = {[weak self] in
+    fileprivate lazy var pageView: PageView = {[weak self] in
         
         let pageViewFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kScreenH -  kStatusBarH - kNavigationBarH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         //添加子视图
         var childVcs = [UIViewController]()
-        for _ in 0..<4{
+        childVcs.append(RecommendViewController())
+        for _ in 0..<3{
             let childVc = UIViewController()
             childVcs.append(childVc)
         }
@@ -37,7 +38,7 @@ class HomeViewController: UIViewController {
 }
 //MARK:- 有关UI的设置
 extension HomeViewController {
-    private func setupUI(){
+    fileprivate func setupUI(){
         
         automaticallyAdjustsScrollViewInsets = false
         
@@ -48,7 +49,7 @@ extension HomeViewController {
     }
     
     ///设置NavigationBar
-    private func setupNavigationBar(){
+    fileprivate func setupNavigationBar(){
         //设置左边的logo的按钮
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo")
         

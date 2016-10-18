@@ -12,10 +12,10 @@ private let scrollLineH: CGFloat = 2
 
 class PageTitleView: UIView {
     
-    private var titles:[String]
+    fileprivate var titles:[String]
     
-    private lazy var titleLabels: [UILabel] = [UILabel]()
-    private lazy var scrollView : UIScrollView = {
+    fileprivate lazy var titleLabels: [UILabel] = [UILabel]()
+    fileprivate lazy var scrollView : UIScrollView = {
         let scrolleView = UIScrollView()
         scrolleView.bounces = false
         scrolleView.showsHorizontalScrollIndicator = false
@@ -23,9 +23,9 @@ class PageTitleView: UIView {
     }()
     
     ///底部的可以滑动的细线
-    private lazy var scrollLine : UIView = {
+    fileprivate lazy var scrollLine : UIView = {
         let scrollLine = UIView()
-        scrollLine.backgroundColor = UIColor.orangeColor()
+        scrollLine.backgroundColor = UIColor.orange
         return scrollLine
     }()
     
@@ -42,7 +42,7 @@ class PageTitleView: UIView {
 //MARK:- 设置UI界面
 extension PageTitleView {
     
-    private func setupUI(){
+    fileprivate func setupUI(){
         //添加背景的scrollview
         scrollView.frame = bounds
         addSubview(scrollView)
@@ -56,16 +56,16 @@ extension PageTitleView {
     }
     
     ///设置titlesLabel
-    private func setupTitleLables(){
+    fileprivate func setupTitleLables(){
         
         let labelW: CGFloat = bounds.width/CGFloat(titles.count)
         let labelH: CGFloat = bounds.height
-        for (index,title) in titles.enumerate() {
+        for (index,title) in titles.enumerated() {
             let label = UILabel()
             //设置label的属性
-            label.textAlignment = .Center
-            label.font = UIFont.systemFontOfSize(15)
-            label.textColor = UIColor.darkGrayColor()
+            label.textAlignment = .center
+            label.font = UIFont.systemFont(ofSize: 15)
+            label.textColor = UIColor.darkGray
             label.text = title
             label.tag = index
             //设置frame
@@ -80,17 +80,17 @@ extension PageTitleView {
     }
     
     ///设置底部的细线和底部的滑动细线
-    private func setupBottomLineAndScrollLine(){
+    fileprivate func setupBottomLineAndScrollLine(){
         //添加底部的细线
         let bottomLine = UIView()
-        bottomLine.backgroundColor = UIColor.darkGrayColor()
+        bottomLine.backgroundColor = UIColor.darkGray
         let bottomH: CGFloat = 0.5
         bottomLine.frame = CGRect(x: 0, y: bounds.height - bottomH, width: bounds.width, height: bottomH)
         addSubview(bottomLine)
         
         guard let firstLabel = titleLabels.first else { return }
         
-        firstLabel.textColor = UIColor.orangeColor()
+        firstLabel.textColor = UIColor.orange
         
         ///添加底部的滑动的细线
         let scrollLineY = bounds.height - scrollLineH
