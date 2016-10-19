@@ -19,7 +19,9 @@ class HomeViewController: UIViewController {
         //添加子视图
         var childVcs = [UIViewController]()
         childVcs.append(RecommendViewController())
-        for _ in 0..<3{
+        childVcs.append(GameViewController())
+        childVcs.append(AsumeViewController())
+        for _ in 0..<1{
             let childVc = UIViewController()
             childVcs.append(childVc)
         }

@@ -145,18 +145,17 @@ extension PageView {
 extension PageView {
     fileprivate func setupContentView(){
         //添加中间的contentView
-        contentView.frame = CGRect(x: 0, y: titleViewH, width: bounds.width, height: bounds.height - titleViewH)
+        contentView.frame = CGRect(x: 0, y: titleViewH, width: bounds.width, height: bounds.height - titleViewH - kTabBarH)
         contentView.showsHorizontalScrollIndicator = false
         contentView.isPagingEnabled = true
         contentView.bounces = false
         contentView.delegate = self
-        contentView.contentSize = CGSize(width: contentView.bounds.width * CGFloat(childVcs.count), height: contentView.bounds.height - titleViewH)
+        contentView.contentSize = CGSize(width: contentView.bounds.width * CGFloat(childVcs.count), height: contentView.bounds.height - titleViewH - kTabBarH)
         addSubview(contentView)
         
         //添加子控制器
         for childVc in childVcs {
             parentViewController?.addChildViewController(childVc)
-            childVc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
         }
         
     }

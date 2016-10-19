@@ -7,16 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="DYTV" customModuleProvider="target">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kSectionHeaderId" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="DYTV" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="352" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_hot" translatesAutoresizingMaskIntoConstraints="NO" id="4Qh-Et-gSV">
-                    <constraints>
-                        <constraint firstAttribute="height" constant="18" id="Gn5-jW-y9E"/>
-                        <constraint firstAttribute="width" constant="18" id="Hrc-Nz-pyP"/>
-                    </constraints>
-                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_hot" translatesAutoresizingMaskIntoConstraints="NO" id="4Qh-Et-gSV"/>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSr-BO-qI7">
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -49,6 +44,7 @@
             </constraints>
             <connections>
                 <outlet property="iconImageView" destination="4Qh-Et-gSV" id="MZd-B9-gyp"/>
+                <outlet property="moreBtn" destination="Pjp-G7-bdu" id="2u8-Qe-2k5"/>
                 <outlet property="titleLabel" destination="HSr-BO-qI7" id="osG-5D-8IE"/>
             </connections>
             <point key="canvasLocation" x="-118" y="-34"/>

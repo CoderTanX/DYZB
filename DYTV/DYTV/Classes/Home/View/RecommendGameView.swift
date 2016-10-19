@@ -13,9 +13,9 @@ private let kGameCellId: String = "kGameCellId"
 class RecommendGameView: UIView {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var groups: [AnchorGroup]?{
+    var groups: [BaseGameModel]?{
         didSet{
-            guard let groups = groups else {return}
+            guard let _ = groups else {return}
             collectionView.reloadData()
         }
         
@@ -46,7 +46,7 @@ extension RecommendGameView: UICollectionViewDataSource{
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellId, for: indexPath) as! CollectionViewGameCell
-        cell.group = groups?[indexPath.row]
+        cell.game = groups?[indexPath.row]
         return cell
     }
 }

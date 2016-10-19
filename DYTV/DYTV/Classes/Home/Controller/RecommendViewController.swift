@@ -35,8 +35,7 @@ class RecommendViewController: UIViewController {
         collectionView.backgroundColor = UIColor.white
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         //设置内边距
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH+kGameViewH, left: 0, bottom: kTabBarH, right: 0)
-        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: kTabBarH, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH+kGameViewH, left: 0, bottom: 0, right: 0)
         collectionView.dataSource = self
         collectionView.delegate = self
         //注册普通cell
