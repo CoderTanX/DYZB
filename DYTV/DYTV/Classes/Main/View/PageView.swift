@@ -15,6 +15,8 @@ private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
 
 
 class PageView: UIView {
+    ///当前下标
+    fileprivate var currentIndex : Int = 0
     ///标题数组
     fileprivate var titles: [String]
     ///标题label数组
@@ -29,6 +31,8 @@ class PageView: UIView {
     
     ///顶部的titleView
     fileprivate lazy var titleView : UIView = UIView()
+    
+    fileprivate var isForbidScrollDelegate : Bool = false
     
     ///顶部视图底部的scrollview
     fileprivate lazy var titleScrollView : UIScrollView = {
@@ -165,20 +169,41 @@ extension PageView {
 extension PageView{
     
     @objc fileprivate func titleLabelClick(_ tapGes: UITapGestureRecognizer){
+        //禁止代理
+        isForbidScrollDelegate = true
         let currentLabel = tapGes.view as! UILabel
+        // 获取之前的Label
+        let oldLabel = titleLabels[currentIndex]
+        // 切换文字的颜色
+        oldLabel.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
+        currentLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
+        
+        // 保存最新Label的下标值
+        currentIndex = currentLabel.tag
+        
+        // 滚动条位置发生改变
+        let scrollLineX = CGFloat(currentIndex) * titleScrollLine.frame.width
+        UIView.animate(withDuration: 0.15, animations: {
+            self.titleScrollLine.frame.origin.x = scrollLineX
+        })
+
         //给contentView添加子视图
         let childVc : UIViewController = childVcs[currentLabel.tag]
         let childVcX = CGFloat(currentLabel.tag) * contentView.bounds.width
         childVc.view.frame = CGRect(x: childVcX, y: 0, width: contentView.bounds.width, height: contentView.bounds.height)
         
         contentView.addSubview(childVc.view)
-        contentView.setContentOffset(CGPoint(x: childVcX, y: 0), animated: true)
+        contentView.setContentOffset(CGPoint(x: childVcX, y: 0), animated: false)
         
     }
 }
 
 //MARK: - uiscrollview的代理
 extension PageView: UIScrollViewDelegate{
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isForbidScrollDelegate = false
+    }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
@@ -189,6 +214,7 @@ extension PageView: UIScrollViewDelegate{
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if isForbidScrollDelegate { return }
 //        print(scrollView.contentOffset.x/scrollView.bounds.width)
         let radio: CGFloat = scrollView.contentOffset.x/scrollView.bounds.width
         //设置底部滑动细线frame
@@ -204,8 +230,10 @@ extension PageView: UIScrollViewDelegate{
             targetIndex = Int(floor(radio))
             progress = 1 - radio + floor(radio)
         }
+        
         let sourceLabel = titleLabels[sourceIndex]
         let targetLabel = titleLabels[targetIndex]
+        
         // 3.颜色的渐变(复杂)
         // 3.1.取出变化的范围
         let colorDelta = (kSelectColor.0 - kNormalColor.0, kSelectColor.1 - kNormalColor.1, kSelectColor.2 - kNormalColor.2)

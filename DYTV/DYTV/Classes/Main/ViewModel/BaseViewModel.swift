@@ -1,20 +1,20 @@
 //
-//  AsumeViewModel.swift
+//  BaseViewModel.swift
 //  DYTV
 //
-//  Created by 谭安溪 on 2016/10/19.
+//  Created by 谭安溪 on 2016/10/21.
 //  Copyright © 2016年 谭安溪. All rights reserved.
 //
 
 import UIKit
 
-class AsumeViewModel {
+class BaseViewModel {
     var anchorGroups: [AnchorGroup] = [AnchorGroup]()
 }
-//MARK: - 请求数据
-extension AsumeViewModel {
-    func requestAsumeData(finishedCallBack: @escaping () -> ()){
-        NetworkTools.requsetData(.GET, URLString: "http://capi.douyucdn.cn/api/v1/getHotRoom/2") { (result) in
+
+extension BaseViewModel{
+    func loadAnchorData(URLString: String, parameters: [String: Any]? = nil, finishedCallBack: @escaping () -> ()){
+        NetworkTools.requsetData(.GET, URLString: URLString, parameters: parameters) { (result) in
             guard let dataArray = result["data"] as? [[String: Any]] else { return }
             for dict in dataArray{
                 self.anchorGroups.append(AnchorGroup(dict: dict))

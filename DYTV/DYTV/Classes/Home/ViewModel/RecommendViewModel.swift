@@ -8,9 +8,7 @@
 
 import UIKit
 
-class RecommendViewModel: NSObject {
-    /// 主播分组
-    lazy var anchorGroups: [AnchorGroup] = [AnchorGroup]()
+class RecommendViewModel: BaseViewModel {
     /// 轮播图
     lazy var cycleModels: [CycleModel] = [CycleModel]()
     fileprivate lazy var bigDataGroup: AnchorGroup = AnchorGroup()
@@ -50,15 +48,18 @@ extension RecommendViewModel{
         
         dGruop.enter()
         //剩余部分的请求
-        NetworkTools.requsetData(.GET, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (result) in
-            guard let dataArray = result["data"] as? [[String: Any]] else { return }
-            for dict in dataArray{
-                let group = AnchorGroup(dict: dict)
-                self.anchorGroups.append(group)
-            }
+//        NetworkTools.requsetData(.GET, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (result) in
+//            guard let dataArray = result["data"] as? [[String: Any]] else { return }
+//            for dict in dataArray{
+//                let group = AnchorGroup(dict: dict)
+//                self.anchorGroups.append(group)
+//            }
+//            dGruop.leave()
+//        }
+        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { 
             dGruop.leave()
         }
-        dGruop.notify(queue: DispatchQueue.main) { 
+        dGruop.notify(queue: DispatchQueue.main) {
             self.anchorGroups.insert(self.prettyGroup, at: 0)
             self.anchorGroups.insert(self.bigDataGroup, at: 0)
             finishedCallBack()

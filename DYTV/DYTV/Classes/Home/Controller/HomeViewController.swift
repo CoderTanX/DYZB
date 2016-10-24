@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
         var childVcs = [UIViewController]()
         childVcs.append(RecommendViewController())
         childVcs.append(GameViewController())
-        childVcs.append(AsumeViewController())
+        childVcs.append(AmuseViewController())
         for _ in 0..<1{
             let childVc = UIViewController()
             childVcs.append(childVc)

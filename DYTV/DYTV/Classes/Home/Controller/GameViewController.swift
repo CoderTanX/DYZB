@@ -29,6 +29,8 @@ class GameViewController: UIViewController {
         layout.minimumInteritemSpacing = 0
         layout.headerReferenceSize = CGSize(width: kScreenW, height: 50)
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
+        //设置内边距
+        collectionView.contentInset = UIEdgeInsets(top: kGameViewH + kTopHeaderViewH, left: 0, bottom: 0, right: 0)
         //数据源
         collectionView.dataSource = self
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
