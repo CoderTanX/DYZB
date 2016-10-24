@@ -21,10 +21,7 @@ class HomeViewController: UIViewController {
         childVcs.append(RecommendViewController())
         childVcs.append(GameViewController())
         childVcs.append(AmuseViewController())
-        for _ in 0..<1{
-            let childVc = UIViewController()
-            childVcs.append(childVc)
-        }
+        childVcs.append(FunnyViewController())
         let pageView = PageView(frame: pageViewFrame, titles: titles, titleViewH: 40, childVcs: childVcs, parentViewController: self!)
         return pageView
     }()

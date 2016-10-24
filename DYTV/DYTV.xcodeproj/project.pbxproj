@@ -42,6 +42,9 @@
 		DBA477871DBDE58000503144 /* AmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA477861DBDE58000503144 /* AmuseViewModel.swift */; };
 		DBA4778A1DBDF03200503144 /* AmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA477881DBDF03200503144 /* AmuseMenuViewCell.swift */; };
 		DBA4778B1DBDF03200503144 /* AmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA477891DBDF03200503144 /* AmuseMenuViewCell.xib */; };
+		DBA4778D1DBE186000503144 /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4778C1DBE186000503144 /* FunnyViewController.swift */; };
+		DBA4778F1DBE18F900503144 /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4778E1DBE18F900503144 /* FunnyViewModel.swift */; };
+		DBA477931DBE26E000503144 /* Wallet.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBA477921DBE26E000503144 /* Wallet.plist */; };
 		DBB514ED1DB70F6D00FD618D /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB514EC1DB70F6D00FD618D /* GameModel.swift */; };
 		DBB514EF1DB712FE00FD618D /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB514EE1DB712FE00FD618D /* BaseGameModel.swift */; };
 		DBF3B5BD1DB46B9B005C32C7 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF3B5BB1DB46B9B005C32C7 /* Follow.storyboard */; };
@@ -115,6 +118,9 @@
 		DBA477861DBDE58000503144 /* AmuseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewModel.swift; sourceTree = "<group>"; };
 		DBA477881DBDF03200503144 /* AmuseMenuViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseMenuViewCell.swift; sourceTree = "<group>"; };
 		DBA477891DBDF03200503144 /* AmuseMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseMenuViewCell.xib; sourceTree = "<group>"; };
+		DBA4778C1DBE186000503144 /* FunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
+		DBA4778E1DBE18F900503144 /* FunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
+		DBA477921DBE26E000503144 /* Wallet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Wallet.plist; sourceTree = "<group>"; };
 		DBB514EC1DB70F6D00FD618D /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		DBB514EE1DB712FE00FD618D /* BaseGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
 		DBF3B5BC1DB46B9B005C32C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYTV/Base.lproj/Follow.storyboard; sourceTree = SOURCE_ROOT; };
@@ -247,6 +253,7 @@
 				DB730D8C1D8FCAD20029C7F5 /* RecommendViewController.swift */,
 				DB8E7BAC1DB6275000BCC828 /* GameViewController.swift */,
 				DBA477841DBDE4FE00503144 /* AmuseViewController.swift */,
+				DBA4778C1DBE186000503144 /* FunnyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -417,6 +424,7 @@
 				DBF3B5CF1DB4841D005C32C7 /* RecommendViewModel.swift */,
 				DBA477861DBDE58000503144 /* AmuseViewModel.swift */,
 				DB8E7BAE1DB6301200BCC828 /* GameViewModel.swift */,
+				DBA4778E1DBE18F900503144 /* FunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -459,6 +467,7 @@
 				EA018EFB1D8BE675006AC0C4 /* AppDelegate.swift */,
 				EA018F021D8BE675006AC0C4 /* Assets.xcassets */,
 				EA018F071D8BE675006AC0C4 /* Info.plist */,
+				DBA477921DBE26E000503144 /* Wallet.plist */,
 			);
 			path = DYTV;
 			sourceTree = "<group>";
@@ -607,6 +616,7 @@
 				DBF3B5C91DB46BDA005C32C7 /* Main.storyboard in Resources */,
 				DBF3B5C01DB46BBA005C32C7 /* Profile.storyboard in Resources */,
 				DB431FA91D90E1B2002564EB /* CollectionPrettyCell.xib in Resources */,
+				DBA477931DBE26E000503144 /* Wallet.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +692,7 @@
 				DBF3B5CB1DB47245005C32C7 /* NetworkTools.swift in Sources */,
 				DBA4778A1DBDF03200503144 /* AmuseMenuViewCell.swift in Sources */,
 				DB730DA81D8FCAD20029C7F5 /* PageTitleView.swift in Sources */,
+				DBA4778D1DBE186000503144 /* FunnyViewController.swift in Sources */,
 				DB730DB91D8FCC680029C7F5 /* CollectionHeaderView.swift in Sources */,
 				EA018EFC1D8BE675006AC0C4 /* AppDelegate.swift in Sources */,
 				DBB514EF1DB712FE00FD618D /* BaseGameModel.swift in Sources */,
@@ -709,6 +720,7 @@
 				DBA477811DBDE2B100503144 /* AmuseMenuView.swift in Sources */,
 				DB431FA81D90E1B2002564EB /* CollectionPrettyCell.swift in Sources */,
 				DB8E7B9B1DB5BE8300BCC828 /* RecommendCycleView.swift in Sources */,
+				DBA4778F1DBE18F900503144 /* FunnyViewModel.swift in Sources */,
 				DB730DBD1D8FD0040029C7F5 /* CollectionNormalCell.swift in Sources */,
 				DB730DAC1D8FCAD20029C7F5 /* UIColor+Extension.swift in Sources */,
 				DB8E7BA31DB5D31300BCC828 /* CycleModel.swift in Sources */,
